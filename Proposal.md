@@ -14,33 +14,54 @@ The main objective of the project is to offer users a practical tool to organize
 * Providing the ability to mark tasks as completed to track progress.
 * Allowing the editing of existing tasks to update information as needed.
 * Facilitating the deletion of tasks that are no longer relevant or necessary.
+* Calendar Integration: Allow users to synchronize their tasks with external calendars such as Google Calendar or Outlook.
+
 
 Possible Image 
+
+![alt text](<Screenshot 2024-04-06 at 3.14.18 PM.png>)
+
 
 ERD
 
 https://lucid.app/lucidchart/d9e29bbb-ecc9-4af2-9521-d9e7294908df/edit?viewport_loc=-1610%2C-381%2C1893%2C972%2C0_0&invitationId=inv_d9a72c4e-1b3f-47ff-afb4-f8b7790bd258
 
+![alt text](<Screenshot 2024-04-06 at 3.15.11 PM.png>)
 
 Project Features:
 
-**Task Creation: Users will be able to add new tasks by specifying a title and description for each one.
-**Task Viewing: The application will display all existing tasks in an ordered list, allowing users to easily view all their pending activities.
-**Task Completion Marking: Users will be able to mark a task as completed to indicate that it has been successfully finished.
-**Task Editing: Users will have the option to edit an existing task to update its title or description as needed.
-**Task Deletion: Users will be able to delete a task from the list if it is no longer relevant or necessary.
+** Task Creation: Users will be able to add new tasks by specifying a title and description for each one.
+
+** Task Viewing: The application will display all existing tasks in an ordered list, allowing users to easily view all their pending activities.
+
+** Task Completion Marking: Users will be able to mark a task as completed to indicate that it has been successfully finished.
+
+** Task Editing: Users will have the option to edit an existing task to update its title or description as needed.
+
+** Task Deletion: Users will be able to delete a task from the list if it is no longer relevant or necessary.
+
+** Calendar Integration: Users will be able to synchronize their tasks with external calendars such as Google Calendar or Outlook for better planning and time management.
+
 
 Technologies Used:
 
-Backend:
+ Backend:
 
-//Node.js: JavaScript runtime environment used to build the server.
-Express.js: Node.js web application framework used to define and manage API routes.
-MongoDB (with Mongoose): NoSQL database used to store and manage task data.
+
+*** Node.js: JavaScript runtime environment used to build the server.
+
+*** Express.js: Node.js web application framework used to define and manage API routes.
+
+*** MongoDB (with Mongoose): NoSQL database used to store and manage task data.
+
 Front end:
-HTML: Markup language used to structure the user interface.
-CSS: Style language used to style and design the user interface.
-JavaScript (without frameworks): Programming language used to implement frontend logic and make requests to the API.
+
+*** HTML: Markup language used to structure the user interface.
+
+
+*** CSS: Style language used to style and design the user interface.
+
+*** JavaScript (without frameworks): Programming language used to implement frontend logic and make requests to the API.
 
 Conclusions:
 
@@ -48,3 +69,7 @@ The project will provide users with a useful and effective tool to manage their 
 
 
 Timeline
+
+![
+](<Screenshot 2024-04-06 at 2.56.18 PM.png>)
+
