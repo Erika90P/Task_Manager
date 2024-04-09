@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 
-const caledarManagerSchema = new mongoose.Schema({
+const calendarManagerSchema = new mongoose.Schema({
     calendarId: { type: String },
     userId: { type: String },
     calendar_type: { type: String, required: true },
     calendar_link: { type: String },
-
 });
 
 const calendarManager = mongoose.model('calendarManager', calendarManagerSchema);
