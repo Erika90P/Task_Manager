@@ -1,4 +1,4 @@
-import taskManager from '../models/User.js';
+import taskManager from '../models/Task.js'
 import Task from '../models/Task.js';
 
 // Controller para crear una nueva tarea
