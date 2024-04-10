@@ -1,4 +1,4 @@
-import userManager from '../models/User.js';
+import userManager from '../../models/User.js';
 
 // controller for new user
 export const createUser = async (req, res) => {
