@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
+        // Especificar la URL del endpoint para iniciar sesión
+        const loginUrl = "http://localhost:3000/api/user/"; // Reemplaza con la URL de tu backend
+
         // Hacer una solicitud POST al backend para iniciar sesión
-        fetch("/login", {
+        fetch(loginUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,8 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const title = document.getElementById("task-title").value;
         const description = document.getElementById("task-description").value;
 
+        // Especificar la URL del endpoint para crear una nueva tarea
+        const createTaskUrl = "http://localhost:3000/api/task"; // Reemplaza con la URL de tu backend
+
         // Hacer una solicitud POST al backend para agregar una nueva tarea
-        fetch("/create-task", {
+        fetch(createTaskUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

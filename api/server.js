@@ -4,7 +4,7 @@ import taskRoutes from "./routers/taskRouters.js";
 import userRoutes from "./routers/userRouters.js";
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan'
-import cors from 'cors'
+import cors from 'cors';
 
 
 import dotenv from 'dotenv'
@@ -21,7 +21,7 @@ app.use(cookieParser());
 
 // Usar las rutas definidas
 
-app.use('api/router', calendarRoutes);
+app.use('/api/calendar', calendarRoutes); 
 app.use('/api/task', taskRoutes);
 app.use('/api/user', userRoutes);
 
