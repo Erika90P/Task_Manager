@@ -1,18 +1,19 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import calendarRoutes from "./routers/calendarRouters.js"
 import taskRoutes from "./routers/taskRouters.js";
 import userRoutes from "./routers/userRouters.js";
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan'
 import cors from 'cors';
-
-
 import dotenv from 'dotenv'
 dotenv.config()
 import './config/database.js'
 
 const app = express()
 const PORT = 3000;
+
+
 
 app.use(express.json());
 app.use(cors())
