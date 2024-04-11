@@ -1,5 +1,7 @@
 import taskManager from '../models/Task.js'
 import Task from '../models/Task.js';
+import mongoose from 'mongoose';
+
 
 // Controller para crear una nueva tarea
 export const createTask = async (req, res) => {
