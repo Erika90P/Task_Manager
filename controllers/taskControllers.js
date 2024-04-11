@@ -52,3 +52,13 @@ export const getUserTasks = async (req, res) => {
         res.status(500).json({ message: 'Error interno del servidor' });
     }
 };
+
+export const getAllTasks = async (req, res) => {
+    try {
+        const tasks = await Task.find(); // Encuentra todas las tareas
+        res.status(200).json(tasks); // Envía las tareas encontradas como respuesta
+    } catch (error) {
+        console.error('Error al obtener todas las tareas:', error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+    }
+};
