@@ -23,6 +23,8 @@ app.use(cookieParser());
 const corsOptions = {
     origin: 'https://zippy-pixie-0621f2.netlify.app/',
     credentials: true, // Permitir cookies cruzadas
+    methods: ['GET', 'POST'], // Los métodos que aceptas
+
   };
   
   app.use(cors(corsOptions));
