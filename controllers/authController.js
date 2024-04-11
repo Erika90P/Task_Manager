@@ -26,7 +26,13 @@ export const login = async (req, res) => {
             if (result) {
                 const payload = { email: user.email };
                 const token = jwt.sign(payload, process.env.SECRET, { expiresIn: '1d' }); // Example: Expiring in 1 day
-                res.cookie('token', token, { httpOnly: true }).json({ message: 'Login successful' });
+                
+                // Set the cookie with the token
+                res.cookie('token', token, {
+                    httpOnly: true,
+                    secure: true, // Use true if your site is served over HTTPS
+                    sameSite: 'None', // Use 'None' to allow sending cookies with cross-origin requests
+                }).json({ message: 'Login successful' });
             } else {
                 res.status(400).json({ error: 'Password does not match' });
             }
@@ -37,6 +43,7 @@ export const login = async (req, res) => {
         res.status(500).json({ error: 'Error logging in' });
     }
 };
+
 
 export const logout = async (req, res) => { 
     res.clearCookie('token').json({ message: 'Logout successful' });
