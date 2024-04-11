@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 // Controller para crear una nueva tarea
 export const createTask = async (req, res) => {
     try {
-        const userId = mongoose.Types.ObjectId(req.body.userId); // Convierte el userId a ObjectId
+        const userId = new mongoose.Types.ObjectId(req.body.userId) // Convierte el userId a ObjectId
         const { title, description } = req.body;
 
         const newTaskData = {
