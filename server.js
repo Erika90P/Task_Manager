@@ -16,9 +16,17 @@ const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
-app.use(cors())
+// app.use(cors())
 app.use(morgan('combined'))
 app.use(cookieParser());
+
+const corsOptions = {
+    origin: 'https://tuDominioFrontend.com',
+    credentials: true, // Permitir cookies cruzadas
+  };
+  
+  app.use(cors(corsOptions));
+  
 
 // Usar las rutas definidas
 
