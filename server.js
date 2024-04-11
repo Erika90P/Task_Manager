@@ -21,7 +21,7 @@ app.use(morgan('combined'))
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'https://tuDominioFrontend.com',
+    origin: '*',
     credentials: true, // Permitir cookies cruzadas
   };
   
