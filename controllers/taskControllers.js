@@ -4,20 +4,20 @@ import Task from '../models/Task.js';
 // Controller para crear una nueva tarea
 export const createTask = async (req, res) => {
     try {
-        const newTask = await taskManager.create(req.body);
+        const userId = mongoose.Types.ObjectId(req.body.userId); // Convierte el userId a ObjectId
+        const { title, description } = req.body;
+
+        const newTaskData = {
+            userId, // Usa el userId ya convertido
+            title,
+            description
+        };
+
+        const newTask = await Task.create(newTaskData);
         res.status(201).json(newTask);
     } catch (error) {
+        console.error('Error al crear la tarea:', error);
         res.status(400).json({ message: error.message });
-    }
-};
-
-// Controller para obtener todas las tareas
-export const getAllTasks = async (req, res) => {
-    try {
-        const tasks = await Task.find();
-        res.status(200).json(tasks);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
     }
 };
 
