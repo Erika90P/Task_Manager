@@ -21,7 +21,8 @@ app.use(morgan('combined'))
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'https://zippy-pixie-0621f2.netlify.app/',
+    // origin: 'https://zippy-pixie-0621f2.netlify.app/',
+    origin: true, // Temporarily allow requests from any origin
     credentials: true, // Permitir cookies cruzadas
     methods: ['GET', 'POST'], // Los métodos que aceptas
 
