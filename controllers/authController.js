@@ -27,12 +27,25 @@ export const login = async (req, res) => {
                 const payload = { email: user.email };
                 const token = jwt.sign(payload, process.env.SECRET, { expiresIn: '1d' }); // Example: Expiring in 1 day
                 
+                // Construct the userData object
+                const userData = {
+                    username: user.username, // Assuming 'username' is a field in your User model
+                    email: user.email,
+                    userId: user._id // MongoDB's default ID field
+                };
+                
                 // Set the cookie with the token
                 res.cookie('token', token, {
                     httpOnly: true,
+                    path: '/', // Makes the cookie available across the entire domain
                     secure: true, // Use true if your site is served over HTTPS
                     sameSite: 'None', // Use 'None' to allow sending cookies with cross-origin requests
-                }).json({ message: 'Login successful' });
+                })
+                .json({ 
+                    message: 'Login successful',
+                    token: token, // Ensure this is the actual token
+                    userData: userData // Include the userData object in the response
+                });
             } else {
                 res.status(400).json({ error: 'Password does not match' });
             }
@@ -43,6 +56,7 @@ export const login = async (req, res) => {
         res.status(500).json({ error: 'Error logging in' });
     }
 };
+
 
 
 export const logout = async (req, res) => { 
