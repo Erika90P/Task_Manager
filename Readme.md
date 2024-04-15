@@ -2,7 +2,7 @@
 
 About the Project
 
-Task Manager is a comprehensive tool designed to enhance efficient task management and boost productivity. This system supports basic functions such as task creation, viewing, updating, and deletion, and includes advanced features like calendar integration and statistical report generation. It is a complete solution for organizing daily activities and tracking progress.”
+Task Manager is a comprehensive tool designed to enhance efficient task management and boost productivity. This system supports basic functions such as task creation, viewing, updating, and deletion. It is a complete solution for organizing daily activities and tracking progress.”
 
 
 Project Objectives
